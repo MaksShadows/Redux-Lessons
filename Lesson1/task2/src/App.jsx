@@ -13,9 +13,9 @@ class App extends Component {
     render() {
         return (
             <div className="page">
-            <userContext.Provider value={this.state.userData}>
+            <UserContext.Provider value={this.state.userData}>
               <Header />
-            </userContext.Provider>
+            </UserContext.Provider>
           </div>
         );
     }
