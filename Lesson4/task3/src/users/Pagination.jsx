@@ -10,7 +10,7 @@ const Pagination = ({ goPrev, goNext, currentPage, totalItems, itemsPerPage}) =>
       <button
           className="btn"
           onClick={goPrev}
-          disabled={!isPrevPageAvailable}
+          disabled={isPrevPageAvailable}
       >
           {isPrevPageAvailable && "←"}
       </button>
