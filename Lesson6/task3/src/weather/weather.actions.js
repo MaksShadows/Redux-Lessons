@@ -1,4 +1,4 @@
-import fetchWeatherData from "./weather.gateway";
+import getWeatherData from "./weather.gateway";
 
 
 export const WEATHER_DATA_RECEIVED = "WEATHER/WEATHER_DATA_RECEIVED";
