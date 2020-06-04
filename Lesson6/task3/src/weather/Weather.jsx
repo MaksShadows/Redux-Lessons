@@ -1,14 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { weatherDataSelector } from "./weather.selectors";
 import * as weatherActions from "./weather.actions";
 
-const Weather = ({ weatherData }) => {
+const Weather = ({ weatherData, getWeatherData }) => {
 
-    if(!weatherData){
-        return null
-    }
+    useEffect(() => {
+        return getWeatherData();
+    }, []);
 
     return (
         <main className="weather">
@@ -29,7 +29,6 @@ const Weather = ({ weatherData }) => {
 
 Weather.propTypes = {
     getWeatherData: PropTypes.func.isRequired,
-    weatherData: PropTypes.shape()
 };
 
 const mapState = (state) => {
