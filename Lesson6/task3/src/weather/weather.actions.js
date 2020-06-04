@@ -1,6 +1,3 @@
-import getWeatherData from "./weather.gateway";
-
-
 export const WEATHER_DATA_RECEIVED = "WEATHER/WEATHER_DATA_RECEIVED";
 
 export const weatherDataReceived = (weatherData) => {
@@ -11,7 +8,6 @@ export const weatherDataReceived = (weatherData) => {
         },
     };
 };
-
 
 const baseUrl = "https://5e5cf5eb97d2ea0014796f01.mockapi.io/api/v1/cities";
 
