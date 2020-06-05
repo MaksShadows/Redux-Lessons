@@ -38,4 +38,4 @@ export const deleteTask = (taskId) => {
         if (!response.ok) throw new Error("Failed to delete task");
     });
 };
-applicationCache;
+

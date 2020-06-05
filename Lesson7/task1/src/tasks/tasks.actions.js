@@ -28,10 +28,10 @@ export const updateTask = (taskId) => {
     const thunkAction = function (dispatch, getState) {
         const state = getState();
         const tasksList = tasksListSeletor(state);
-        const taskItem = tasksList.find((task) => task.id === taskId);
+        const task = tasksList.find((task) => task.id === taskId);
         const updatedTask = {
-            ...taskItem,
-            done: !taskItem.done,
+            ...task,
+            done: !task.done,
         };
 
         tasksGateway
